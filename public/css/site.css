@@ -1,0 +1,26 @@
+body, header, h1, h2 {
+	text-align: center;
+}
+
+div.content {
+	padding: 0em 1em 1em 1em;
+	overflow-wrap: break-word;
+}
+
+.error {
+	background-color: #eecccc;
+	margin-bottom: 1em;
+	text-align: center;	
+}
+
+.success {
+	background-color: #cceecc;
+}
+
+form div {
+	padding-bottom: 0.5em;
+}
+
+ul {
+	list-style: none;
+}
