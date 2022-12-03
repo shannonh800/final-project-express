@@ -12,13 +12,11 @@ const RestaurantSchema = new mongoose.Schema({
     website: String,
     phone: String,
     keywords: String,
-    reviews: [{type: mongoose.Schema.Types.ObjectId, ref: "Review"}]
+    reviews: [{rating: String, commentary: String}]
 })
 
 // Review schema draft
 const ReviewSchema = new mongoose.Schema({
-    //user: {type: mongoose.Schema.Types.ObjectId, ref: "User"},
-    //restaurant: {type: mongoose.Schema.Types.ObjectId, ref: "Restaurant"},
     restaurant: String,
     rating: {type: Number, required: true},
     commentary: String
@@ -40,7 +38,6 @@ mongoose.model("Review", ReviewSchema);
 
 
 // setup connection to client
-
 // is the environment variable, NODE_ENV, set to PRODUCTION? 
 const __dirname = path.dirname(url.fileURLToPath(import.meta.url));
 let dbconf;
